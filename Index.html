@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GANAMOS CASINO</title>
+  <link href="fonts.googleapis.com/fonts.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-image: url('img/fondopublicidad');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-image: url('./img/fondoDis1.png.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #f0ec2f;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 10px 20px;
+    }
+
+    .bono {
+      font-size: 2rem;
+      color: #fa1f1f;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .boton-whatsapp {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #25D366;
+      animation: destello-wa 1.5s infinite alternate;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .boton-whatsapp:hover {
+      background-color: #1EBE5B;
+      transform: scale(1.05);
+    }
+
+    @keyframes destello-wa {
+      0% {
+        box-shadow: 0 0 5px #25D366, 0 0 10px #25D366, 0 0 20px #25D366;
+        background-color: #25D366;
+      }
+      100% {
+        box-shadow: 0 0 20px #6effa2, 0 0 40px #6effa2, 0 0 60px #6effa2;
+        background-color: #2fe67a;
+      }
+    }
+
+    /* Opcional: centrar el botón */
+    .boton-container {
+      margin-top: 1.5rem;
+    }
+
+   </style>
+  <!-- Inicio Pixel -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1633219171083461');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1633219171083461&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <!-- Final Pixel --> 
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 class="bono">15% BONO DE BIENVENIDA</h3>
+    <a href="https://wa.me/5493562592301?text=Hola%2C%20quiero%20crear%20mí%20usuario%20🙌" target="_blank" class="boton-whatsapp">
+      💬 Chateá por WhatsApp
+    </a>
+    <br>
+    <h2>🔴 "Retiros Sin Limites"</h2>
+  </div>
+
+  <!-- Script de WhatsApp Mejorado -->
+  <script>
+    // Configuración de WhatsApp
+    const WHATSAPP_CONFIG = {
+      phoneNumber: '5493562592301', // Tu número actual
+      defaultMessage: 'Hola, quiero crear mí usuario 🙌'
+    };
+
+    // Función para abrir WhatsApp con tracking
+    function openWhatsAppWithTracking(message = WHATSAPP_CONFIG.defaultMessage) {
+      // Tracking del evento para Facebook Pixel
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact', {
+          content_name: 'WhatsApp Click',
+          content_category: 'Lead Generation'
+        });
+      }
+
+      // Detectar si es dispositivo móvil
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const encodedMessage = encodeURIComponent(message);
+      
+      if (isMobile) {
+        // En móvil: intenta abrir la app directamente
+        window.location.href = `whatsapp://send?phone=${WHATSAPP_CONFIG.phoneNumber}&text=${encodedMessage}`;
+        
+        // Fallback a wa.me después de 1 segundo si la app no se abre
+        setTimeout(() => {
+          window.open(`https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodedMessage}`, '_blank');
+        }, 1000);
+      } else {
+        // En desktop: abre WhatsApp Web
+        window.open(`https://web.whatsapp.com/send?phone=${WHATSAPP_CONFIG.phoneNumber}&text=${encodedMessage}`, '_blank');
+      }
+
+      // Log para analytics (opcional)
+      console.log('WhatsApp contact initiated');
+    }
+
+    // Event listener para el botón de WhatsApp
+    document.addEventListener('DOMContentLoaded', function() {
+      const whatsappButton = document.querySelector('.boton-whatsapp');
+      
+      if (whatsappButton) {
+        whatsappButton.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevenir el comportamiento por defecto
+          openWhatsAppWithTracking();
+        });
+      }
+
+      // Agregar tracking a todos los enlaces de WhatsApp en la página
+      const allWhatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]');
+      allWhatsappLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact');
+          }
+        });
+      });
+    });
+
+    // Función adicional por si quieres llamarla desde otro lado
+    function contactarWhatsApp(mensajePersonalizado) {
+      openWhatsAppWithTracking(mensajePersonalizado || WHATSAPP_CONFIG.defaultMessage);
+    }
+
+    // Auto-redirect después de 3 segundos (ACTIVADO)
+    setTimeout(() => {
+      const userInteracted = sessionStorage.getItem('user_interacted');
+      if (!userInteracted) {
+        openWhatsAppWithTracking('Hola, quiero crear mí usuario 🙌');
+      }
+    }, 3000); // 3 segundos
+
+    // Marcar que el usuario interactuó
+    document.addEventListener('click', () => {
+      sessionStorage.setItem('user_interacted', 'true');
+    });
+  </script>
+</body>
+</html>
